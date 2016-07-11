@@ -38,12 +38,12 @@ public class Assignment2 {
 			
 			con = DriverManager.getConnection(dbUrl, dbProperties);
 			
-			String query = "UPDATE students_other_info SET password=? WHERE regno=? AND password=?";
+			String query = "UPDATE students_other_info SET password=? WHERE reg_no=? AND password=?";
 			pstmt = con.prepareStatement(query);
 			
-			System.out.print("Enter registration password: ");
-			int regno = scn.nextInt();
-			pstmt.setInt(2, regno);
+			System.out.print("Enter registration number: ");
+			int reg_no = scn.nextInt();
+			pstmt.setInt(2, reg_no);
 			
 			System.out.print("Enter current password: ");
 			String current_password = scn.next();
@@ -53,7 +53,7 @@ public class Assignment2 {
 			String new_password = scn.next();
 			pstmt.setString(1, new_password);
 			
-			if(pstmt.execute()) {
+			if(pstmt.executeUpdate() == 1) {
 				System.out.println("Password changed. Record successfully updated.");
 			} else {
 				System.err.println("Reg No. or password does not match. Could not update the record.");

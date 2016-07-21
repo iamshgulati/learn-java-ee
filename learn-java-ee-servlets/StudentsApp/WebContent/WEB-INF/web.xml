@@ -9,14 +9,21 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>com.shubhamgulati.studentsApp.servlets.MyFirstServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/currentdate</url-pattern>
+  </servlet-mapping>
   
   <servlet>
-  	<servlet-name>MyServlet</servlet-name>
-  	<servlet-class>com.shubhamgulati.studentsApp.MyFirstServlet</servlet-class>
+  	<servlet-name>CreateProfile</servlet-name>
+    <servlet-class>com.shubhamgulati.studentsApp.servlets.CreateProfile</servlet-class>
   </servlet>
-  
   <servlet-mapping>
-  	<servlet-name>MyServlet</servlet-name>
-  	<url-pattern>/currentDate</url-pattern>
+  	<servlet-name>CreateProfile</servlet-name>
+  	<url-pattern>/createprofile</url-pattern>
   </servlet-mapping>
 </web-app>

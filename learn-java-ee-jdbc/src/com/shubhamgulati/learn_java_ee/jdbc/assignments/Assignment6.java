@@ -35,7 +35,9 @@ public class Assignment6 {
 			
 			con = DriverManager.getConnection(dbUrl, dbProperties);
 			
-			String query = "SELECT students_info.reg_no, first_name, middle_name, last_name, guardian_first_name, guardian_middle_name, guardian_last_name, is_admin, password FROM students_info, guardian_info, students_other_info WHERE students_info.reg_no=?";
+			String query = "SELECT * FROM students_info, guardian_info, students_other_info "
+							+ "WHERE students_info.reg_no=guardian_info.reg_no AND students_info.reg_no=students_other_info.reg_no "
+							+ "AND students_info.reg_no=?";
 			pstmt = con.prepareStatement(query);
 			
 			System.out.print("Enter registration number: ");

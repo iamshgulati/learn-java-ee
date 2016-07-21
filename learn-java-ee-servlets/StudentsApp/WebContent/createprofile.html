@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create Profile</title>
+</head>
+<body>
+	<h1 align="center">Create Student Profile</h1>
+	
+	<form action="http://localhost:8080/StudentsApp/createprofile" method="post">
+		<table>
+			<tr>
+				<td style="column-width: 200px">Registration Number</td>
+				<td><input type="text" name="reg_no" size="30" placeholder="Enter registration number"></td>
+			</tr>
+			
+			<tr>
+				<td>First Name</td>
+				<td><input type="text" name="first_name" size="30" placeholder="Enter first name"></td>
+			</tr>
+			
+			<tr>
+				<td>Middle Name</td>
+				<td><input type="text" name="middle_name" size="30" placeholder="Enter middle name"></td>
+			</tr>
+			
+			<tr>
+				<td>Last Name</td>
+				<td><input type="text" name="last_name" size="30" placeholder="Enter last name"></td>
+			</tr>
+			
+			<tr>
+				<td>Guardian's First Name</td>
+				<td><input type="text" name="guardian_first_name" size="30" placeholder="Enter guardian's first name"></td>
+			</tr>
+			
+			<tr>
+				<td>Guardian's Middle Name</td>
+				<td><input type="text" name="guardian_middle_name" size="30" placeholder="Enter guardian's middle name"></td>
+			</tr>
+			
+			<tr>
+				<td>Guardian's Last Name</td>
+				<td><input type="text" name="guardian_last_name" size="30" placeholder="Enter guardian's last name"></td>
+			</tr>
+			
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password" size="30" placeholder="Enter password"></td>
+			</tr>
+			
+			<tr>
+				<td>Is this administrator?</td>
+				<td>
+					<select name="is_admin" >
+						<option value="null">--select--</option>
+						<option value="y">YES</option>
+						<option value="n">NO</option>
+					</select>
+				</td>
+			</tr>
+			<tr><td><br></td></tr>
+			<tr align="center">
+				<td><input type="submit" name="submit_form" size="30" value="Submit"></td>
+				<td><input type="reset" name="reset_form" size="30" value="Reset"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

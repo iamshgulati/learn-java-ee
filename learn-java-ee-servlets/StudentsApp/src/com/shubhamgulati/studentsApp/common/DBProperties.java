@@ -1,4 +1,4 @@
-package com.shubhamgulati.learn_java_ee.jdbc.common;
+package com.shubhamgulati.studentsApp.common;
 
 public interface DBProperties {
 	

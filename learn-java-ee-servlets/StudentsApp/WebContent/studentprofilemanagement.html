@@ -2,13 +2,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Create Student Profile</title>
+<title>Student Profile Management</title>
 </head>
 <body>
-	<form action="http://localhost:8080/StudentsApp/createprofile"
+	<form
+		action="http://localhost:8080/StudentsApp/studentprofilemanagement"
 		method="post">
 		<fieldset style="width: 20%">
-			<legend>Create Student Profile</legend>
+			<legend>Student Profile Management</legend>
 			<table>
 				<tr>
 					<th align="left" style="padding: 2px">Registration Number</th>
@@ -16,61 +17,61 @@
 						name="reg_no" size="30" placeholder="Enter registration number"
 						required="required" autofocus="autofocus"></td>
 				</tr>
-
 				<tr>
 					<th align="left" style="padding: 2px">First Name</th>
 					<td align="left" style="padding: 2px"><input type="text"
 						name="first_name" size="30" placeholder="Enter first name"
 						required="required"></td>
 				</tr>
-
 				<tr>
 					<th align="left" style="padding: 2px">Middle Name</th>
 					<td align="left" style="padding: 2px"><input type="text"
 						name="middle_name" size="30" placeholder="Enter middle name"
 						required="required"></td>
 				</tr>
-
 				<tr>
 					<th align="left" style="padding: 2px">Last Name</th>
 					<td align="left" style="padding: 2px"><input type="text"
 						name="last_name" size="30" placeholder="Enter last name"
 						required="required"></td>
 				</tr>
-
 				<tr>
 					<th align="left" style="padding: 2px">Guardian's First Name</th>
 					<td align="left" style="padding: 2px"><input type="text"
 						name="guardian_first_name" size="30"
 						placeholder="Enter guardian's first name" required="required"></td>
 				</tr>
-
 				<tr>
 					<th align="left" style="padding: 2px">Guardian's Middle Name</th>
 					<td align="left" style="padding: 2px"><input type="text"
 						name="guardian_middle_name" size="30"
 						placeholder="Enter guardian's middle name" required="required"></td>
 				</tr>
-
 				<tr>
 					<th align="left" style="padding: 2px">Guardian's Last Name</th>
 					<td align="left" style="padding: 2px"><input type="text"
 						name="guardian_last_name" size="30"
 						placeholder="Enter guardian's last name" required="required"></td>
 				</tr>
-
 				<tr>
 					<th align="left" style="padding: 2px">Password</th>
 					<td align="left" style="padding: 2px"><input type="password"
 						name="password" size="30" placeholder="Enter password"
 						required="required"></td>
 				</tr>
-
 				<tr>
 					<th align="left" style="padding: 2px">Is this administrator?</th>
 					<td align="left" style="padding: 2px"><select name="is_admin">
 							<option value="n" selected="selected">NO</option>
 							<option value="y">YES</option>
+					</select></td>
+				</tr>
+				<tr>
+					<th align="left" style="padding: 2px">Action</th>
+					<td><select name="action">
+							<option value="c" selected="selected">CREATE</option>
+							<option value="u">UPDATE</option>
+							<option value="d">DELETE</option>
 					</select></td>
 				</tr>
 				<tr>

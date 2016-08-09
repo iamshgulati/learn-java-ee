@@ -5,65 +5,72 @@
 <title>Form Example</title>
 </head>
 <body>
-	<h2>Student Info</h2>
 	<form action="" method="post">
-		<p>
-			My name is:
-				<input type="text" id="name" size="30" placeholder="enter name">
-		</p>
-		
-		<p>
-			My password is:
-				<input type="password" id="password" size="15" placeholder="enter password">
-		</p>
-		
-		<p>
-			My gender is:
-				<input type="radio" id="gender" value="male" checked="checked">Male
-				<input type="radio" id="gender" value="female">Female
-		</p>
-		
-		<p>
-			My education is:
-				<select name="education">
-					<option value="b.tech-cse">B.Tech CSE</option>
-					<option value="m.tech-cse" selected="selected">M.Tech CSE</option>
-					<option value="b.tech-ece">B.Tech ECE</option>
-					<option value="b.tech-it">B.Tech IT</option>
-				</select>
-		</p>
-		
-		<p>
-			I know:
-				<input type="checkbox" name="skills" value="java" checked="checked">Java<br>
-				<input type="checkbox" name="skills" value="jdbc">JDBC<br>
-				<input type="checkbox" name="skills" value="servlets">Servlets<br>
-				<input type="checkbox" name="skills" value="jsp">JSP<br>
-				<input type="checkbox" name="skills" value="html">HTML<br>
-				<input type="checkbox" name="skills" value="css">CSS<br>
-				<input type="checkbox" name="skills" value="mysql">MySQL
-		</p>
-		
-		<p>
-			I have:
-				<select name="vehicle" multiple="multiple">
-					<option value="bicycle">Bicycle</option>
-					<option value="motorcycle">Motor Cycle</option>
-					<option value="car">Car</option>
-					<option value="tractor">Tractor</option>
-					<option value="truck">Truck</option>
-				</select>
-		</p>
-		
-		<p>
-			About me:
-				<textarea rows="4" cols="40"></textarea>
-		</p>
-		
-		<p>
-			<input type="button" name="submit" value="Submit">
-		</p>
-		
+		<fieldset style="width: 20%">
+			<legend>Student Info</legend>
+			<table>
+				<tr>
+					<th align="left" style="padding: 3px">Name</th>
+					<td align="left" style="padding: 3px"><input type="text"
+						id="name" size="30" placeholder="Enter name" required="required"
+						autofocus="autofocus"></td>
+				</tr>
+				<tr>
+					<th align="left" style="padding: 3px">Password</th>
+					<td align="left" style="padding: 3px"><input type="password"
+						id="name" size="30" placeholder="Enter password"
+						required="required"></td>
+				</tr>
+				<tr>
+					<th align="left" style="padding: 3px">Gender</th>
+					<td align="left" style="padding: 3px"><input type="radio"
+						id="gender" value="male" checked="checked">Male <input
+						type="radio" id="gender" value="female">Female</td>
+				</tr>
+				<tr>
+					<th align="left" style="padding: 3px">Education</th>
+					<td align="left" style="padding: 3px"><select name="education">
+							<option value="b.tech-cse">B.Tech CSE</option>
+							<option value="m.tech-cse" selected="selected">M.Tech
+								CSE</option>
+							<option value="b.tech-ece">B.Tech ECE</option>
+							<option value="b.tech-it">B.Tech IT</option>
+					</select></td>
+				</tr>
+				<tr>
+					<th align="left" style="padding: 3px">Skills</th>
+					<td align="left" style="padding: 3px"><input type="checkbox"
+						name="skills" value="java" checked="checked">Java<br>
+						<input type="checkbox" name="skills" value="jdbc">JDBC<br>
+						<input type="checkbox" name="skills" value="servlets">Servlets<br>
+						<input type="checkbox" name="skills" value="jsp">JSP<br>
+						<input type="checkbox" name="skills" value="html">HTML<br>
+						<input type="checkbox" name="skills" value="css">CSS<br>
+						<input type="checkbox" name="skills" value="mysql">MySQL</td>
+				</tr>
+				<tr>
+					<th align="left" style="padding: 3px">Own</th>
+					<td align="left" style="padding: 3px"><select name="vehicle"
+						multiple="multiple">
+							<option value="bicycle">Bicycle</option>
+							<option value="motorcycle">Motor Cycle</option>
+							<option value="car">Car</option>
+							<option value="tractor">Tractor</option>
+							<option value="truck">Truck</option>
+					</select></td>
+				</tr>
+				<tr>
+					<th align="left" style="padding: 3px">About Me</th>
+					<td align="left" style="padding: 3px"><textarea rows="4"
+							cols="40"></textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align="left" style="padding: 3px"><input type="button"
+						name="submit" value="Submit"></td>
+				</tr>
+			</table>
+		</fieldset>
 	</form>
 </body>
 </html>

@@ -60,3 +60,7 @@ INSERT INTO students_other_info VALUES
 (3,'n','qwerty'),
 (4,'n','qwerty'),
 (5,'n','qwerty');
+
+8. Show student data
+
+SELECT * FROM students_info AS si, guardian_info AS gi, students_other_info AS soi WHERE si.reg_no=gi.reg_no AND si.reg_no=soi.reg_no;

@@ -1,9 +1,12 @@
 Stored Procedures:
 
-
 Query to see all procedures
 USE bece6_db;
 SHOW PROCEDURE STATUS WHERE DB=DATABASE();
+
+Query to drop procedure
+USE bece6_db;
+DROP PROCEDURE procedure_name;
 
 1. Stored Procedure 1
 
@@ -98,3 +101,82 @@ BEGIN
 END //
 
 delimiter ;
+
+5. Stored Procedure 5
+
+delimiter //
+
+CREATE PROCEDURE studentProfileManagement(
+	IN in_reg_no INT,
+	IN in_fnm VARCHAR(50),
+	IN in_mnm VARCHAR(50),
+	IN in_lnm VARCHAR(50),
+	IN in_g_fnm VARCHAR(50),
+	IN in_g_mnm VARCHAR(50),
+	IN in_g_lnm VARCHAR(50),
+	IN in_is_admin VARCHAR(1),
+	IN in_password VARCHAR(50),
+	IN in_action VARCHAR(50))
+BEGIN
+	IF in_action = "c" THEN
+		START TRANSACTION;
+		INSERT INTO students_info VALUES (in_reg_no, in_fnm, in_mnm, in_lnm);
+		INSERT INTO guardian_info VALUES (in_reg_no, in_g_fnm, in_g_mnm, in_g_lnm);
+		INSERT INTO students_other_info VALUES (in_reg_no, in_is_admin, in_password);
+		COMMIT;
+	END IF;
+	
+	IF in_action = "u" THEN
+		START TRANSACTION;
+		UPDATE students_info
+		SET first_name = in_fnm,
+			middle_name = in_mnm,
+			last_name = in_lnm
+		WHERE reg_no = in_reg_no;
+	
+		UPDATE guardian_info
+		SET guardian_first_name = in_g_fnm,
+			guardian_middle_name = in_g_mnm,
+			guardian_last_name = in_g_lnm
+		WHERE reg_no = in_reg_no;
+		
+		UPDATE students_other_info
+		SET is_admin = in_is_admin,
+			password = in_password
+		WHERE reg_no = in_reg_no;
+		COMMIT;
+	END IF;
+	
+	IF in_action = "d" THEN
+		START TRANSACTION;
+		DELETE FROM students_info WHERE reg_no=in_reg_no;
+		DELETE FROM guardian_info WHERE reg_no=in_reg_no;
+		DELETE FROM students_other_info WHERE reg_no=in_reg_no;
+		COMMIT;
+	END IF;
+END //
+
+delimiter ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

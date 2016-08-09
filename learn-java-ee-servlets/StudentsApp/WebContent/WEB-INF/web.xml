@@ -17,13 +17,36 @@
     <servlet-name>MyServlet</servlet-name>
     <url-pattern>/currentdate</url-pattern>
   </servlet-mapping>
-  
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/new/currentdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/currentdate.php</url-pattern>
+  </servlet-mapping>
   <servlet>
-  	<servlet-name>CreateProfile</servlet-name>
+    <servlet-name>CreateProfile</servlet-name>
     <servlet-class>com.shubhamgulati.studentsApp.servlets.CreateProfile</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>CreateProfile</servlet-name>
-  	<url-pattern>/createprofile</url-pattern>
+    <servlet-name>CreateProfile</servlet-name>
+    <url-pattern>/createprofile</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>StudentProfileManagement</servlet-name>
+    <servlet-class>com.shubhamgulati.studentsApp.servlets.StudentProfileManagement</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentProfileManagement</servlet-name>
+    <url-pattern>/studentprofilemanagement</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>StudentSearch</servlet-name>
+  	<servlet-class>com.shubhamgulati.studentsApp.servlets.StudentSearch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>StudentSearch</servlet-name>
+  	<url-pattern>/studentsearch</url-pattern>
   </servlet-mapping>
 </web-app>

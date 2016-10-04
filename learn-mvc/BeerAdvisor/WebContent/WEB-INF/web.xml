@@ -9,4 +9,12 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>SelectBeer</servlet-name>
+    <servlet-class>com.shubhamgulati.beerAdvisor.controller.SelectBeer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SelectBeer</servlet-name>
+    <url-pattern>/SelectBeer.do</url-pattern>
+  </servlet-mapping>
 </web-app>
